@@ -235,18 +235,27 @@ header {
     text-decoration: underline;
 }
 .modal-agree input[type=checkbox] {
-    visibility: hidden;
-    margin-right: 9px;
+    opacity: 0;
 }
-.modal-agree input[type=checkbox]::before {
+.modal-agree label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-agree label::before {
     content: "";
-    visibility: visible;
-    display: block;
     width: 16px;
     height: 15px;
+    margin-right: 10px;
+    
+}
+.modal-agree input[type=checkbox]:focus + label::before {
+    outline: var(--active-link) auto 1px;
+}
+.modal-agree input[type=checkbox] + label::before {
     background: url('../img/check.svg');
 }
-.modal-agree input[type=checkbox]:checked::before {
+.modal-agree input[type=checkbox]:checked + label::before {
     background: url('../img/checked.svg');
 }
 .modal-btn-send {
