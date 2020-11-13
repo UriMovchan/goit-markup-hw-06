@@ -611,9 +611,10 @@ nav {
 .portfolio-list-item-link-text {
     overflow: hidden;
     position: absolute;
+    width: calc(100% + 2px);
     right: 0;
     bottom: 0;
-    left: 0;
+    left: -1px;
     display: flex;
     align-items: center;
     height: 0;
